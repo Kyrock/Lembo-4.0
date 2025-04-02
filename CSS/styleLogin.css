@@ -15,6 +15,7 @@
     /* Secundary Color */
     --Green: #007832;
     --Blue: #50E5F9;
+    --Orange: #FDC300;
 
     /* Color Neutro */
     --Blanco: #FFF;
@@ -24,6 +25,24 @@
     --Gris-60: #949494;
     --Gris-40: #C5C5C5;
     --Gris-20: #F6F6F6;
+}
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2.4rem ;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.6rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+h6{ 
+    font-size: 1rem;
 }
 
 * {
@@ -47,24 +66,24 @@ body {
 
 /* Formulario */
 .container__form {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     width: 35.313rem;
-    height: 37.5rem;
+    height: 34rem;
     flex-direction: column;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
-    border-radius: 15px;
-    background: var(--Primary-900);
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.2);
+    border-radius: 0.6rem;
+    background: var(--Primary-800);
     align-items: center;
+    gap: 0.5rem;
 }
 
 /* Tamaño letra login */
 .container__title {
     text-align: center;
-    font-size: 4rem;
     text-transform: uppercase;
     color: var(--Blanco);
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
     text-shadow: 1rem;
 }
 
@@ -76,20 +95,21 @@ p {
 
 /* Espacios en el formulario */
 .container__input {
-    padding: 1rem 3.5rem;
+    display: flex;
+    padding: 1rem auto;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.4rem;
     background-color:var(--Blanco);
     outline: none;
     color: var(--Negro);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    gap: 2.4rem;
 }
 
 /* Logo */
 .container__logo {
-    width: 6.139rem;
-    height: 5.769rem;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 10rem;
     margin-bottom: 3rem;
 }
@@ -98,28 +118,36 @@ p {
 .container__input-box {
     position: relative;
     width: 27rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem ;
+}
+.container__logo--img{
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Estilos para los campos de entrada */
 .container__input-box .container__input {
+    display: flex;
     width: 100%;
-    padding: 15px 45px;
+    padding: 1.5rem 4.5rem;
     font-size: 1rem;
     color: var(--Negro);
     background-color: var(--Blanco);
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     outline: none;
+    gap: 2.4rem;
 }
 
 /* Estilo de los íconos */
 .container__icon {
     position: absolute;
-    top: 1.5rem;
+    top: 1.8rem;
     left: 1rem;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--Negro);
 }
 
@@ -145,7 +173,8 @@ p {
     cursor: pointer;
     padding: 0.8rem;
     width: 16rem;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
+    border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -156,25 +185,24 @@ p {
 }
 /* Alertas del formulario */
 .correcto {
-    background-color: var(--Primary-500);
-    border: solid var(--Gris-100) 0.1rem ;
+    background-color: var(--Primary-600);
     border-radius: 1rem;
     margin-top: 1rem;
     text-align: center;
     padding: 1rem;
-    color: var(--Blanco);
+    color: var(--Negro);
     text-transform: uppercase;
     border-radius: 1rem;
 }
 
 .error {
-    background-color: rgb(185, 0, 0);
-    border: solid var(--Gris-100) 0.1rem ;
+    background-color: var(--Orange);
+    /* border: solid var(--Gris-100) 0.1rem ; */
     border-radius: 1rem;
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
-    color: var(--blanco);
+    color: var(--Blanco);
     text-transform: uppercase;
     border-radius: 1rem;
 }
@@ -188,7 +216,7 @@ p {
     }
 
     .container__title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .container__input-box {
@@ -201,7 +229,7 @@ p {
 }
 
 /* Responsivo para móviles (pantallas pequeñas) */
-@media (max-width: 480px) {
+@media (width < 480px) {
     .container__form {
         width: 100%;
         height: auto;
@@ -212,17 +240,17 @@ p {
         font-size: 2.5rem;
     }
 
-    .container__icon {
+    .container__icon::before {
         display: none;
     }
 
     .container__logo {
-        width: 4rem;
-        height: 4rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     .container__input-box .container__input {
-        padding: 10px 15px;
+        padding: 1rem 1.5rem;
         font-size: 1rem;
     }
 
