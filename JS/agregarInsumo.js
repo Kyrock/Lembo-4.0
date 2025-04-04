@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             showMessage('Error: Debes llenar todos los campos', 'error');
             return;
         }else{
-            showMessage('¡Insumo actualizado con éxito!', 'correcto');
+            showMessage('¡Insumo agregado con éxito!', 'correcto');
         setTimeout(() => {
             window.location.href = 'insumo.html';
         }, 2000);
